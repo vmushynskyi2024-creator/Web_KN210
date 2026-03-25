@@ -1,0 +1,64 @@
+
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Контейнер для товарів (використовуємо flex, щоб виставити в ряд) */
+.container {
+    display: flex;
+    justify-content: center; /* Центруємо блоки на сторінці */
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+/* Картка товару (блочний елемент div) */
+.product-card {
+    background-color: white;
+    width: 250px; /* Фіксована ширина як у фото */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Стилі для зображень */
+.product-card img {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Посилання (назва товару) */
+.product-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.product-card a:hover {
+    text-decoration: underline;
+}
+
+/* Виділення важливих частин тексту (лінійний елемент span) */
+.highlight {
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+.promo {
+    background-color: #ffeb3b;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: #d32f2f;
+    font-weight: bold;
+}
