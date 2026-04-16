@@ -1,0 +1,116 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.header-text {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+    margin-top: 30px;
+}
+
+.all-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 260px;
+    padding: 20px;
+    margin: 10px;
+    border: 6px solid #333; 
+    outline: 4px solid #999;
+    text-align: center;
+}
+.product-table a:link {
+    color: black;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.product-table a:visited {
+    color: purple;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.product-table a:hover {
+    color: black;
+    font-style: italic;
+    background-color: #ffcc00; 
+    text-decoration: none;
+}
+
+.product-table a:active {
+    color: blue;
+    font-style: italic;
+    text-decoration: underline;
+    background-color: #00ffcc; 
+}
+
+.title-item {
+    font-family: 'Verdana', sans-serif;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+.title-item a {
+    color: #0055cc;
+    text-decoration: underline;
+}
+
+.highlight {
+    background-color: yellow;
+    padding: 2px 5px;
+}
+
+/* Картинки в картках (фіксований розмір) */
+.card img {
+    width: 180px;
+    height: 130px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* --- СТИЛІ ТАБЛИЦІ --- */
+.product-table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: white;
+    outline: 3px solid #444; /* Додаткова вимога Box Model */
+}
+
+.product-table th, .product-table td {
+    border: 2px solid #333;
+    padding: 12px;
+    text-align: left;
+}
+
+.product-table thead {
+    background-color: #333;
+    color: white;
+}
+
+/* Зебра для таблиці */
+.product-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Маленькі фото в таблиці */
+.table-item img {
+    width: 50px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
