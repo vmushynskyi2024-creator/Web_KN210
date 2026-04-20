@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №9</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-image: url('kartunka.jpg');
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: 150px;
+            font-family: sans-serif;
+        }
+
+        @keyframes move {
+            from { 
+                transform: translateX(0); 
+                background-color: red; 
+            }
+            to { 
+                transform: translateX(200px); 
+                background-color: blue; 
+            }
+        }
+
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            margin: 50px 0;
+            animation: move 2s ease-in-out 2s infinite alternate;
+        }
+
+        .background-example {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(90deg, rgba(67, 129, 153, 1) 0%, rgba(221, 165, 230, 1) 70%, rgba(237, 221, 83, 1) 100%);
+        }
+
+        .clip-circle { width: 200px; clip-path: circle(50%); margin: 20px 0; }
+        
+        .text-mask-container {
+            background-image: url('kartunka.jpg');
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 60px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>I. Градієнт</h2>
+    <div class="background-example"></div>
+
+    <h2>IV. Використання анімації</h2>
+    <div class="animated-box"></div>
+
+    <h2>II. Обрізання</h2>
+    <img src="kartunka.jpg" class="clip-circle">
+
+    <h2>IV. Маскування текстом</h2>
+    <div class="text-mask-container">HELLO</div>
+
+</body>
+</html>
