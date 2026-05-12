@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №14</title>
+
+    <script>
+
+        function showMessage() {
+            alert("Це спливаюче вікно.");
+        }
+
+        function openNewWindow() {
+            window.open("https://www.google.com", "_blank", "width=400,height=300");
+        }
+
+        function confirmMessage() {
+            let result = confirm("Ви впевнені?");
+
+            if (result) {
+                alert("OK.");
+            } else {
+                alert("Cancel.");
+            }
+        }
+
+        function promptMessage() {
+            let name = prompt("Як вас звати?");
+            alert("Вітаю, " + name + "!");
+        }
+
+        function greetUser() {
+            let name = document.getElementById("userName").value;
+            alert("Вітаю, " + name + "!");
+        }
+
+        function showInput() {
+            let text = document.getElementById("inputField").value;
+            console.log("Ви ввели: " + text);
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            let value = document.getElementById("dataInput").value;
+            alert("Введено: " + value);
+        }
+
+        function openFormWindow() {
+
+            let newWindow = window.open("", "_blank", "width=500,height=500");
+
+            newWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="uk">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Форма реєстрації</title>
+
+                    <style>
+                        body {
+                            font-family: Arial;
+                            padding: 20px;
+                        }
+
+                        input {
+                            display: block;
+                            margin-bottom: 10px;
+                            width: 250px;
+                            padding: 8px;
+                        }
+
+                        button {
+                            padding: 10px 15px;
+                        }
+                    </style>
+                </head>
+
+                <body>
+
+                    <h2>Реєстрація</h2>
+
+                    <form onsubmit="registerUser(event)">
+
+                        <input type="text" id="name" placeholder="Введіть ім'я">
+
+                        <input type="email" id="email" placeholder="Введіть email">
+
+                        <input type="password" id="password" placeholder="Введіть пароль">
+
+                        <button type="submit">Зареєструватися</button>
+
+                    </form>
+
+                    <script>
+
+                        function registerUser(event) {
+
+                            event.preventDefault();
+
+                            let name = document.getElementById("name").value;
+                            let email = document.getElementById("email").value;
+                            let password = document.getElementById("password").value;
+
+                            if(name === "" || email === "" || password === "") {
+                                alert("Будь ласка, заповніть всі поля!");
+                                return;
+                            }
+
+                            if(password.length < 6) {
+                                alert("Пароль повинен містити не менше 6 символів!");
+                                return;
+                            }
+
+                            alert(name + ", вітаємо! Ви успішно зареєстровані!");
+
+                            console.log("Користувач зареєстрований:");
+                            console.log("Ім'я: " + name);
+                            console.log("Email: " + email);
+                        }
+
+                    <\/script>
+
+                </body>
+                </html>
+            `);
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <button onclick="showMessage()">Натисни тут</button>
+
+    <button onclick="openNewWindow()">Відкрити вікно</button>
+
+    <br><br>
+
+    <button onclick="confirmMessage()">Перевірка</button>
+
+    <br><br>
+
+    <button onclick="promptMessage()">Введіть ім'я</button>
+
+    <br><br>
+
+    <iframe src="https://www.google.com"
+            width="400"
+            height="250">
+    </iframe>
+
+    <br><br>
+
+    <form>
+        <input type="text"
+               id="userName"
+               placeholder="Ваше ім'я">
+
+        <button type="button"
+                onclick="greetUser()">
+            Привітати
+        </button>
+    </form>
+
+    <br>
+
+    <input type="text"
+           id="inputField"
+           oninput="showInput()"
+           placeholder="Введіть текст">
+
+    <br><br>
+
+    <form onsubmit="handleSubmit(event)">
+
+        <input type="text"
+               id="dataInput"
+               placeholder="Введіть дані">
+
+        <button type="submit">
+            Надіслати
+        </button>
+
+    </form>
+
+    <br><br>
+
+    <button onclick="openFormWindow()">
+        Відкрити вікно форми
+    </button>
+
+</body>
+</html>
