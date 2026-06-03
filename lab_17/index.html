@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="product-card">
+        <img src="https://picsum.photos/200/150?random=1" alt="Товар 1">
+        <br>
+        <button onclick="toggleDescription('desc1', 'faq1')">Показати / Сховати опис 1</button>
+        <div id="desc1" class="description">Опис першого елемента. Завдання виконано за вимогами самостійної роботи.</div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://picsum.photos/200/150?random=2" alt="Товар 2">
+        <br>
+        <button onclick="toggleDescription('desc2', 'faq2')">Показати / Сховати опис 2</button>
+        <div id="desc2" class="description">Опис другого елемента. Працює незалежно, має унікальний ID.</div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://picsum.photos/200/150?random=3" alt="Товар 3">
+        <br>
+        <button onclick="toggleDescription('desc3', 'faq3')">Показати / Сховати опис 3</button>
+        <div id="desc3" class="description">Опис Open-source третього елемента. Стан відновлюється після оновлення вікна.</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
