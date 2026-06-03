@@ -1,0 +1,58 @@
+.sl_ctr {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.sl_ctr_1 { width: 450px; height: 300px; }
+.sl_ctr_2 { width: 600px; height: 400px; }
+.sl_ctr_3 { width: 800px; height: 450px; }
+
+.sldr {
+    position: relative;
+    width: 10000px;
+}
+
+.sldr_1 { height: 300px; }
+.sldr_2 { height: 400px; }
+.sldr_3 { height: 450px; }
+
+.sldr img {
+    float: left;
+    display: block;
+}
+
+.sl_ctr_1 .sldr img { width: 450px; height: 300px; }
+.sl_ctr_2 .sldr img { width: 600px; height: 400px; }
+.sl_ctr_3 .sldr img { width: 800px; height: 450px; }
+
+.prv_b, .nxt_b {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 24px;
+    font-family: sans-serif;
+    border-radius: 50px;
+    user-select: none;
+}
+
+.sl_ctr_1 .prv_b, .sl_ctr_1 .nxt_b { top: 130px; }
+.sl_ctr_2 .prv_b, .sl_ctr_2 .nxt_b { top: 180px; }
+.sl_ctr_3 .prv_b, .sl_ctr_3 .nxt_b { top: 205px; }
+
+.prv_b:hover, .nxt_b:hover { 
+    background: rgba(0, 0, 0, 0.8); 
+}
+
+.prv_b { left: 10px; }
+.nxt_b { right: 10px; }
+
+.prv_b::before { content: "‹"; }
+.nxt_b::before { content: "›"; }
